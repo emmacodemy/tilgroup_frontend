@@ -1,0 +1,479 @@
+@tailwind base;
+@tailwind components;
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  @apply p-0 m-0 border-0 align-baseline antialiased;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  @apply block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  @apply content-none;
+}
+
+table {
+  @apply border-collapse border-spacing-0;
+}
+
+a {
+  @apply text-inherit no-underline;
+  line-height: 0;
+}
+
+/* GLOBAL STYLES */
+*,
+*:before,
+*:after {
+  @apply box-border font-rubik;
+}
+
+html,
+body {
+  @apply bg-white h-full font-rubik font-normal text-[1.6rem] text-tilgray-dark antialiased leading-[1];
+}
+
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold font-rubik text-tilgray-dark;
+}
+
+.heading__secondary {
+  @apply text-[4.4rem] text-center mb-[9.6rem];
+}
+
+.heading-tertiary {
+  @apply text-[3rem] leading-[1.2] mb-[3.2rem];
+}
+
+.subheading {
+  @apply block text-[1.6rem] font-semibold uppercase mb-[1.6rem] tracking-[0.75px] text-center text-tilblue-light;
+}
+
+.heading__3 {
+  @apply font-rubik font-semibold text-[2.25rem] mb-6;
+}
+
+.heading__subheading {
+  @apply text-center text-tilgray-100 font-semibold text-[1.75rem] mb-16 lowercase;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  @apply text-tilgray-dark text-xl font-normal transition-all;
+}
+
+a:hover,
+a.active {
+  @apply font-semibold;
+}
+
+/* containers */
+
+.row {
+  @apply max-w-[120rem] mx-auto px-[3.2rem];
+}
+
+.main-header {
+  @apply px-[4.8rem] py-0 h-[9.6rem] flex items-center justify-between relative;
+}
+
+.section-hero {
+  @apply h-[calc(100vh_-_6.25rem)] relative overflow-hidden;
+}
+
+.section-how-it-works,
+.section-place-order,
+.section-why,
+.section-about,
+.section-contact {
+  @apply py-[9.6rem] relative;
+}
+.section-main-footer {
+  @apply py-[6rem] relative;
+}
+
+/* .section-how-it-works {
+  @apply bg-white;
+} */
+
+.section-place-order {
+  @apply bg-tilblue-bg;
+}
+
+/* components */
+/* .logo {
+  @apply h-[3.5rem];
+} */
+
+.btn-nav {
+  @apply px-[2.5rem] py-[1.5rem] rounded-[9px] outline-none bg-tilgray-dark text-white cursor-pointer font-rubik font-medium text-[1.8rem];
+}
+
+.btn {
+  @apply px-[3.2rem] py-[1.7rem] rounded-[9px] outline-none bg-tilgray-dark text-white cursor-pointer font-rubik font-semibold text-[2rem];
+}
+
+.btn:hover {
+  @apply bg-tilgray-darker;
+}
+
+.btn.btn--white {
+  @apply bg-white text-tilgray-dark;
+}
+
+.btn.btn--white:hover,
+.btn-nav.btn--white:hover {
+  @apply bg-tilblue-light text-white;
+}
+
+.btn.btn-secondary {
+  @apply bg-transparent border border-white;
+}
+
+.btn.btn-secondary:hover {
+  @apply bg-white text-tilgray-dark;
+}
+
+/* input component */
+.input-group {
+  @apply w-full;
+}
+
+.input-label {
+  @apply font-rubik font-medium text-[1.6rem] inline-block mb-[1.2rem];
+}
+
+.input-group__container {
+  @apply relative flex items-center gap-2.5 bg-white rounded-[0.625rem] p-[1.2rem];
+}
+
+.input-group__container input {
+  @apply outline-none border-none flex-1 text-[1.8rem] text-tilgray-dark;
+}
+
+.input-group__icon {
+  @apply h-6 w-6;
+}
+
+.input-group__icon img {
+  @apply w-full h-full;
+}
+/* general */
+
+/* main navigation links */
+.main-nav__list {
+  @apply flex gap-[4.8rem] items-center;
+}
+
+.main-nav__link a {
+  @apply font-medium text-[1.8rem];
+}
+
+.main-nav__link a:hover {
+  @apply text-tilblue-light;
+}
+
+.main-nav__link.active a {
+  @apply font-semibold text-tilblue-light;
+}
+
+/* hero section */
+.hero-carousel {
+  @apply w-full h-full overflow-hidden;
+}
+
+.hero-carousel img {
+  @apply w-full h-full;
+}
+
+.hero-overlay {
+  @apply absolute top-0 w-full h-full bg-tilgray-overlay;
+}
+
+.hero__content {
+  @apply absolute bottom-0 mt-[9rem];
+}
+
+.hero__header {
+  @apply font-rubik text-[5.2rem] font-bold text-white mb-[5.2rem];
+}
+
+.hero__text {
+  @apply text-[3rem] text-tilblue-light mb-[4.8rem] leading-[1.6rem];
+}
+
+.hero__actions {
+  @apply mb-[15rem] flex items-center gap-6;
+}
+
+/* how it works section */
+.steps__container {
+  @apply grid grid-cols-2 gap-6 items-center gap-y-[9.6rem] gap-x-[6.4rem];
+}
+
+.step-number {
+  @apply text-[8.6rem] font-semibold mb-[1.2rem] text-tilgray-400;
+}
+
+.step-description {
+  @apply text-[1.8rem] leading-[1.8];
+}
+
+.step-img-box {
+  @apply relative flex items-center justify-center;
+}
+
+.step-img-box::before {
+  @apply w-[60%] pb-[60%] bg-tilblue-bg z-[-2];
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img {
+  @apply w-[35%];
+}
+
+.step-img-box::after {
+  @apply w-[45%] pb-[45%] bg-tilblue-lighter z-[-1];
+}
+
+/* section place-order */
+
+.place-order__inner-container {
+  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-600 rounded-[10px];
+}
+
+.place-order__form__inputs {
+  @apply grid grid-cols-2 gap-x-[3.2rem] gap-y-[2.4rem] mb-[2.4rem];
+}
+
+.step-reader {
+  @apply flex items-center gap-6 text-tilgray-dark text-[2rem] mb-[2.4rem];
+}
+
+.step-reader__steps {
+  @apply flex items-center gap-3;
+}
+
+.step-reader__step {
+  @apply h-[1.5rem] w-[1.5rem] rounded-[50%] bg-white;
+}
+
+.step-reader__step.active {
+  @apply bg-black;
+}
+
+/* why section */
+.why__cards {
+  @apply grid grid-cols-4 items-center gap-y-[9.6rem] gap-x-[6.4rem];
+}
+
+.why__card__image {
+  @apply h-[28rem] object-fill rounded-[9px] mb-[2rem];
+}
+
+.why__card__header {
+  @apply flex items-center gap-[0.5rem] text-[2rem] font-medium mb-[1rem];
+}
+
+.why__card__icon {
+  @apply w-[3rem] h-[3rem];
+}
+
+.why__card__text {
+  @apply text-[1.6rem] text-justify leading-[1.2];
+}
+
+.top-pattern {
+  @apply absolute top-0 right-0 z-[-3];
+}
+
+.bottom-pattern {
+  @apply absolute bottom-0 left-0 z-[-3];
+}
+
+/* section about */
+.section-about {
+  @apply bg-tilblue-bg;
+}
+
+.about {
+  @apply grid grid-cols-2 items-start gap-y-[9.6rem] gap-x-[6.4rem] leading-[1.5];
+}
+
+.about p {
+  @apply text-[1.8rem]  mb-[2rem] text-justify;
+}
+
+/* section contact */
+
+.section-contact {
+  @apply bg-tilgray-dark text-white;
+}
+
+.contact__socials {
+  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-400 flex items-start justify-between gap-x-[3.2rem] gap-y-[2.4rem] text-tilgray-dark text-[1.4rem] rounded-[9px] mb-[4.8rem] leading-[1.4];
+}
+
+.contact__social__header {
+  @apply text-[1.8rem] flex items-center gap-[1rem] mb-[1rem] font-semibold;
+}
+
+.contact__social > p {
+  @apply mb-[0.4rem];
+}
+
+.contact__social__icon {
+  @apply w-[2.4rem] h-[2.4rem];
+}
+
+.contact__form__inputs {
+  @apply grid grid-cols-2 gap-x-[3.2rem] gap-y-[2.4rem] mb-[3.2rem];
+}
+
+.contact__form__inputs .input-group__container {
+  @apply bg-transparent text-white border-[2px] border-white;
+}
+
+.contact__form__inputs input {
+  @apply bg-transparent text-white;
+}
+
+.contact__form__inputs textarea {
+  @apply bg-transparent text-white outline-none;
+}
+
+.contact__form__inputs .input-group__icon img {
+  @apply text-white fill-white;
+}
+
+.input-group.area-text {
+  @apply col-span-2;
+}
+@tailwind utilities;
