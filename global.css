@@ -186,7 +186,7 @@ a.active {
 }
 
 .section-hero {
-  @apply h-[calc(100vh_-_6.25rem)] relative overflow-hidden;
+  @apply h-[calc(100vh_-_6.25rem)] min-h-[calc(100vh_-_6.25rem)] relative overflow-hidden;
 }
 
 .section-how-it-works,
@@ -270,7 +270,7 @@ a.active {
 
 /* main navigation links */
 .main-nav {
-  @apply tablet:bg-navoverlay tablet:absolute tablet:top-0 tablet:left-0 tablet:w-full tablet:h-[calc(100vh_-_9.6rem)] tablet:translate-x-[100%] tablet:flex tablet:items-center  tablet:transition-all tablet:duration-[0.5s] tablet:ease-in tablet:opacity-0 pointer-events-none tablet:invisible z-[50] tablet:justify-center;
+  @apply tablet:bg-navoverlay tablet:absolute tablet:top-[9.6rem] tablet:left-0 tablet:w-full tablet:h-[calc(100vh_-_9.6rem)] tablet:translate-x-[100%] tablet:flex tablet:items-center  tablet:transition-all tablet:duration-[0.5s] tablet:ease-in tablet:opacity-0 pointer-events-none tablet:invisible z-[50] tablet:justify-center;
 }
 
 .nav-open .main-nav {
@@ -318,12 +318,16 @@ a.active {
 }
 
 /* hero section */
+
+.hero {
+  @apply h-full;
+}
 .hero-carousel {
   @apply w-full h-full overflow-hidden;
 }
 
 .hero-carousel img {
-  @apply w-full h-full;
+  @apply w-full h-full object-cover;
 }
 
 .hero-overlay {
@@ -364,11 +368,11 @@ a.active {
 }
 
 .step-img-box:nth-child(2) {
-  grid-row: 1;
+  @apply mobile:[grid-row:1];
 }
 
 .step-img-box:nth-child(6) {
-  grid-row: 5;
+  @apply mobile:[grid-row:5];
 }
 
 .step-img-box {
@@ -430,11 +434,11 @@ a.active {
 
 /* why section */
 .why__cards {
-  @apply grid grid-cols-4 items-center gap-y-[9.6rem] gap-x-[6.4rem] tabletLanscape:gap-y-[6.4rem] tabletLanscape:gap-x-[4.8rem] tabletSmall:grid-cols-3 mobile:gap-y-[4.8rem] mobile:grid-cols-1;
+  @apply grid grid-cols-4 items-center gap-y-[9.6rem] gap-x-[6.4rem] tabletLanscape:gap-y-[6.4rem] tabletLanscape:gap-x-[4.8rem] tabletSmall:grid-cols-3 mobile:gap-y-[4.8rem] mobile:grid-cols-1 items-center;
 }
 
 .why__card__image {
-  @apply h-[28rem] object-fill rounded-[9px] mb-[2rem];
+  @apply h-[28rem] rounded-[9px] mb-[2rem] w-full object-cover object-center;
 }
 
 .why__card__header {
@@ -477,7 +481,7 @@ a.active {
 }
 
 .contact__socials {
-  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-400 flex items-start justify-between gap-x-[3.2rem] gap-y-[2.4rem] text-tilgray-dark text-[1.4rem] rounded-[9px] mb-[4.8rem] leading-[1.4];
+  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-400 grid grid-cols-5 justify-between gap-x-[3.2rem] gap-y-[2.4rem] text-tilgray-dark text-[1.4rem] rounded-[9px] mb-[4.8rem] leading-[1.4] tablet:grid-cols-3 tabletSmall:grid-cols-2;
 }
 
 .contact__social__header {
@@ -514,5 +518,27 @@ a.active {
 
 .input-group.area-text {
   @apply col-span-2;
+}
+
+/* notification */
+
+.notification {
+  @apply rounded-[9px] w-full max-w-[70rem] shadow-sm before:content-[''] before:absolute before:block before:h-full before:w-[1rem] overflow-hidden before:bg-tilgreen-50 fixed top-0 right-0 z-[99999] bg-white;
+}
+
+.notification__box {
+  @apply pt-[2.5rem] pb-[2.5rem] px-[3rem] flex items-center gap-[1.8rem] relative;
+}
+
+.notification__close {
+  @apply absolute top-[1.5rem] right-[1.5rem] w-[2.4rem] h-[2.4rem];
+}
+
+.notification__header {
+  @apply font-semibold text-[1.8rem] mb-[0.5rem];
+}
+
+.check-icon {
+  @apply h-[2.4rem] w-[2.4rem];
 }
 @tailwind utilities;

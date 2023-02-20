@@ -46,9 +46,9 @@ module.exports = {
           lighter: "#E2EFF5",
           bg: "#F2FAFE",
         },
-      },
-      boxShadow: {
-        remitise: "0 0 4px 0 rgb(0 0 0 / 12%)",
+        tilgreen: {
+          50: "#31C35A",
+        },
       },
     },
   },
