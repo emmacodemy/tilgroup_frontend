@@ -133,12 +133,7 @@ body {
 }
 
 html {
-  /* font-size: 10px; */
-
-  /* 10px / 16px = 0.625 = 62.5% */
-  /* Percentage of user's browser font-size setting */
-  font-size: 62.5%;
-  overflow-x: hidden;
+  @apply text-[62.5%] overflow-x-hidden tabletLanscape:text-[56.25%] tablet:text-[50%];
 }
 
 h1,
@@ -151,19 +146,15 @@ h6 {
 }
 
 .heading__secondary {
-  @apply text-[4.4rem] text-center mb-[9.6rem];
+  @apply text-[4.4rem] text-center mb-[9.6rem] tabletLanscape:text-[3.6rem] tabletSmall:mb-[4.8rem];
 }
 
 .heading-tertiary {
-  @apply text-[3rem] leading-[1.2] mb-[3.2rem];
+  @apply text-[3rem] leading-[1.2] mb-[3.2rem] tabletLanscape:text-[2.4rem];
 }
 
 .subheading {
   @apply block text-[1.6rem] font-semibold uppercase mb-[1.6rem] tracking-[0.75px] text-center text-tilblue-light;
-}
-
-.heading__3 {
-  @apply font-rubik font-semibold text-[2.25rem] mb-6;
 }
 
 .heading__subheading {
@@ -191,7 +182,7 @@ a.active {
 }
 
 .main-header {
-  @apply px-[4.8rem] py-0 h-[9.6rem] flex items-center justify-between relative;
+  @apply px-[4.8rem] py-0 h-[9.6rem] flex items-center justify-between relative tabletLanscape:px-[3.2rem];
 }
 
 .section-hero {
@@ -278,12 +269,28 @@ a.active {
 /* general */
 
 /* main navigation links */
+.main-nav {
+  @apply tablet:bg-navoverlay tablet:absolute tablet:top-0 tablet:left-0 tablet:w-full tablet:h-[calc(100vh_-_9.6rem)] tablet:translate-x-[100%] tablet:flex tablet:items-center  tablet:transition-all tablet:duration-[0.5s] tablet:ease-in tablet:opacity-0 pointer-events-none tablet:invisible z-[50] tablet:justify-center;
+}
+
+.nav-open .main-nav {
+  @apply tablet:opacity-100 tablet:pointer-events-auto tablet:visible tablet:translate-x-0;
+}
+
+.nav-open .icon-mobile-nav[name="close-outline"] {
+  @apply tablet:block;
+}
+
+.nav-open .icon-mobile-nav[name="menu-outline"] {
+  @apply tablet:hidden;
+}
+
 .main-nav__list {
-  @apply flex gap-[4.8rem] items-center;
+  @apply flex gap-[4.8rem] items-center tabletLanscape:gap-[3.2rem] tablet:flex-col tablet:gap-[4.8rem];
 }
 
 .main-nav__link a {
-  @apply font-medium text-[1.8rem];
+  @apply font-medium text-[1.8rem] tablet:text-[3rem];
 }
 
 .main-nav__link a:hover {
@@ -292,6 +299,22 @@ a.active {
 
 .main-nav__link.active a {
   @apply font-semibold text-tilblue-light;
+}
+
+.btn-mobile-nav {
+  @apply border-none bg-none cursor-pointer hidden tablet:block;
+}
+
+.icon-mobile-nav {
+  @apply h-[4.8rem] w-[4.8rem];
+  /* @apply 
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333; */
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  @apply hidden;
 }
 
 /* hero section */
@@ -312,7 +335,7 @@ a.active {
 }
 
 .hero__header {
-  @apply font-rubik text-[5.2rem] font-bold text-white mb-[5.2rem];
+  @apply font-rubik text-[5.2rem] font-bold text-white mb-[5.2rem] desktop:text-[4.4rem];
 }
 
 .hero__text {
@@ -325,11 +348,11 @@ a.active {
 
 /* how it works section */
 .steps__container {
-  @apply grid grid-cols-2 gap-6 items-center gap-y-[9.6rem] gap-x-[6.4rem];
+  @apply grid grid-cols-2 gap-6 items-center gap-y-[9.6rem] gap-x-[6.4rem] tabletLanscape:gap-y-[6.4rem] tabletLanscape:gap-x-[4.8rem]  mobile:gap-y-[4.8rem] mobile:grid-cols-1;
 }
 
 .step-number {
-  @apply text-[8.6rem] font-semibold mb-[1.2rem] text-tilgray-400;
+  @apply text-[8.6rem] font-semibold mb-[1.2rem] text-tilgray-400 tablet:text-[7.4rem];
 }
 
 .step-description {
@@ -338,6 +361,18 @@ a.active {
 
 .step-img-box {
   @apply relative flex items-center justify-center;
+}
+
+.step-img-box:nth-child(2) {
+  grid-row: 1;
+}
+
+.step-img-box:nth-child(6) {
+  grid-row: 5;
+}
+
+.step-img-box {
+  transform: translateY(2.4rem);
 }
 
 .step-img-box::before {
@@ -370,7 +405,7 @@ a.active {
 }
 
 .place-order__form__inputs {
-  @apply grid grid-cols-2 gap-x-[3.2rem] gap-y-[2.4rem] mb-[2.4rem];
+  @apply grid grid-cols-2 gap-x-[3.2rem] gap-y-[2.4rem] mb-[2.4rem] mobile:grid-cols-1;
 }
 
 .step-reader {
@@ -389,9 +424,13 @@ a.active {
   @apply bg-black;
 }
 
+#select-where {
+  @apply flex-1 outline-none;
+}
+
 /* why section */
 .why__cards {
-  @apply grid grid-cols-4 items-center gap-y-[9.6rem] gap-x-[6.4rem];
+  @apply grid grid-cols-4 items-center gap-y-[9.6rem] gap-x-[6.4rem] tabletLanscape:gap-y-[6.4rem] tabletLanscape:gap-x-[4.8rem] tabletSmall:grid-cols-3 mobile:gap-y-[4.8rem] mobile:grid-cols-1;
 }
 
 .why__card__image {
@@ -424,7 +463,7 @@ a.active {
 }
 
 .about {
-  @apply grid grid-cols-2 items-start gap-y-[9.6rem] gap-x-[6.4rem] leading-[1.5];
+  @apply grid grid-cols-2 items-start gap-y-[9.6rem] gap-x-[6.4rem] leading-[1.5] tabletLanscape:gap-y-[6.4rem] tabletLanscape:gap-x-[4.8rem] mobile:grid-cols-1 mobile:gap-y-[4.8rem];
 }
 
 .about p {
@@ -454,7 +493,7 @@ a.active {
 }
 
 .contact__form__inputs {
-  @apply grid grid-cols-2 gap-x-[3.2rem] gap-y-[2.4rem] mb-[3.2rem];
+  @apply grid grid-cols-2 gap-x-[3.2rem] gap-y-[2.4rem] mb-[3.2rem] mobile:grid-cols-1;
 }
 
 .contact__form__inputs .input-group__container {
