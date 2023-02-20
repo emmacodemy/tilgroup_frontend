@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/output.css" />
+
+</head>
+
+<body>
+    <div class="place-order__inner-container">
+        <h3 class="heading-tertiary text-left mb-[2rem]">Payment Details</h3>
+        <div class="step-reader">
+            <div>Step 3 of 3</div>
+            <div class="step-reader__steps">
+                <div class="step-reader__step active"></div>
+                <div class="step-reader__step active"></div>
+                <div class="step-reader__step active"></div>
+            </div>
+        </div>
+        <form class="place-order__form">
+            <div class="place-order__form__inputs">
+                <div class="input-radio-group">
+                    <label for="area" class="input-radio-label">
+                        <input type="radio" name="payment-type" checked />
+                        <span>Transfer</span>
+                    </label>
+                    <label for="area" class="input-radio-label">
+                        <input type="radio" name="payment-type" checked />
+                        <span>Cash</span>
+                    </label>
+                    <label for="area" class="input-radio-label">
+                        <input type="radio" name="payment-type" checked />
+                        <span>Online</span>
+                    </label>
+                </div>
+            </div>
+            <div class="step3__detailbox">
+                <div class="heading">Price Break down</div>
+                <div class="content">
+                    <div class="delivery">Delivery Fee</div>
+                    <div class="amount">#30,000</div>
+                </div>
+            </div>
+            <div class="step2__action">
+                <button type="submit" class="btn btn-secondary btn-secondary--black">Back</button>
+                <button type="submit" class="btn btn--white">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
