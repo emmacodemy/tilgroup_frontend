@@ -1,0 +1,79 @@
+<h3 class="heading-tertiary text-left mb-[2rem]">Recipient’s Details</h3>
+<div class="step-reader">
+    <div>Step 2 of 3</div>
+    <div class="step-reader__steps">
+        <div class="step-reader__step active"></div>
+        <div class="step-reader__step active"></div>
+        <div class="step-reader__step"></div>
+    </div>
+</div>
+<form class="place-order__form">
+    <div class="place-order__form__inputs">
+        <div class="input-group">
+            <label for="name" class="input-label">Name</label>
+            <div class="input-group__container">
+                <div class="input-group__icon">
+                    <img src="static/images/accountuser.svg" alt="input icon" />
+                </div>
+                <input type="text" name="name" id="name" placeholder="Devin Jhon" required>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="phone" class="input-label">Phone number</label>
+            <div class="input-group__container">
+                <div class="input-group__icon">
+                    <img src="static/images/callphone.svg" alt="input icon" />
+                </div>
+                <input type="text" name="phone" id="phone" placeholder="+2349058695294" required>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="category" class="input-label">Product Category</label>
+            <div class="input-group__container">
+                <select id="select-where" name="select-where" required>
+                    <option value="">Please choose one option:</option>
+                    <option value="default">
+                        <div class="custom-select__option">
+                            <div class="custom-select__option__icon"><img src="static/images/hand truckcategory.svg"
+                                    alt="option icon">
+                                <span>Clothing</span>
+                            </div>
+                        </div>
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="pickup-address" class="input-label">Pick up address</label>
+            <div class="input-group__container">
+                <div class="input-group__icon">
+                    <img src="static/images/locationaddress.svg" alt="input icon">
+                </div>
+                <input type="text" name="pickup-address" id="pickup-address"
+                    placeholder="No35  ojota ,Ikotun ,Lago State." required />
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="apartment" class="input-label">House/Apartment Number (Optional)</label>
+            <div class="input-group__container">
+                <div class="input-group__icon">
+                    <img src="static/images/locationaddress.svg" alt="input icon">
+                </div>
+                <input type="text" name="apartment" id="apartment" placeholder="No35  ojota ,Ikotun ,Lago State." />
+            </div>
+        </div>
+        <div class="input-group">
+            <label for="area" class="input-label">Area (Optional)</label>
+            <div class="input-group__container">
+                <div class="input-group__icon">
+                    <img src="static/images/locationaddress.svg" alt="input icon">
+                </div>
+                <input type="text" name="area" id="area" placeholder="No35  ojota ,Ikotun ,Lago State.">
+            </div>
+        </div>
+    </div>
+    <div class="step2__action">
+        <button type="submit" class="btn btn-secondary btn-secondary--black">Back</button>
+        <button type="submit" class="btn btn--white">Proceed</button>
+    </div>
+</form>

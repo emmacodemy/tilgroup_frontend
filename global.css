@@ -242,6 +242,14 @@ a.active {
   @apply bg-white text-tilgray-dark;
 }
 
+.btn-secondary.btn-secondary--black {
+  @apply bg-transparent text-tilgray-dark border border-tilgray-dark;
+}
+
+.btn-secondary.btn-secondary--black:hover {
+  @apply bg-tilgray-dark text-white;
+}
+
 /* input component */
 .input-group {
   @apply w-full;
@@ -266,6 +274,52 @@ a.active {
 .input-group__icon img {
   @apply w-full h-full;
 }
+
+.input-radio-group {
+  @apply text-[2rem] text-tilgray-200 font-semibold flex items-center gap-[3rem] mt-[2rem] mb-[1rem];
+}
+
+.input-radio-label {
+  @apply flex items-center gap-[1rem];
+}
+
+.input-radio-label span {
+  @apply text-tilgray-800;
+}
+
+.input-radio-label input[type="radio"] {
+  /* Remove most all native input styles */
+  appearance: none;
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 3rem;
+  height: 3rem;
+  border: 4px solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+
+  display: grid;
+  place-content: center;
+}
+
+.input-radio-label input[type="radio"]::before {
+  content: "";
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+.input-radio-label input[type="radio"]:checked::before {
+  transform: scale(1);
+}
+
 /* general */
 
 /* main navigation links */
@@ -430,6 +484,30 @@ a.active {
 
 #select-where {
   @apply flex-1 outline-none;
+}
+
+.step2__action {
+  @apply flex gap-[3rem];
+}
+
+.step3__detailbox {
+  @apply mb-[3rem];
+}
+
+.step3__detailbox .heading {
+  @apply mb-[1.8rem] font-semibold text-[2.4rem];
+}
+
+.step3__detailbox .content {
+  @apply flex items-center gap-[14rem] mobile:gap-3 mobile:justify-between leading-[1.4];
+}
+
+.step3__detailbox .delivery {
+  @apply text-tilgray-800 text-[2rem];
+}
+
+.step3__detailbox .amount {
+  @apply text-[2.3rem];
 }
 
 /* why section */
