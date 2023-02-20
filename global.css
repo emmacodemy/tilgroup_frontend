@@ -167,12 +167,12 @@ ol {
 }
 
 a {
-  @apply text-tilgray-dark text-xl font-normal transition-all;
+  @apply text-tilgray-dark text-[1.6rem] font-normal transition-all;
 }
 
 a:hover,
 a.active {
-  @apply font-semibold;
+  @apply text-tilblue-light;
 }
 
 /* containers */
@@ -270,7 +270,7 @@ a.active {
 
 /* main navigation links */
 .main-nav {
-  @apply tablet:bg-navoverlay tablet:absolute tablet:top-[9.6rem] tablet:left-0 tablet:w-full tablet:h-[calc(100vh_-_9.6rem)] tablet:translate-x-[100%] tablet:flex tablet:items-center  tablet:transition-all tablet:duration-[0.5s] tablet:ease-in tablet:opacity-0 pointer-events-none tablet:invisible z-[50] tablet:justify-center;
+  @apply tablet:bg-navoverlay tablet:absolute tablet:top-[9.6rem] tablet:left-0 tablet:w-full tablet:h-[calc(100vh_-_9.6rem)] tablet:translate-x-[100%] tablet:flex tablet:items-center  tablet:transition-all tablet:duration-[0.5s] tablet:ease-in tablet:opacity-0 tablet:pointer-events-none tablet:invisible z-[50] tablet:justify-center;
 }
 
 .nav-open .main-nav {
@@ -405,7 +405,7 @@ a.active {
 /* section place-order */
 
 .place-order__inner-container {
-  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-600 rounded-[10px];
+  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-600 rounded-[10px] mobile:px-[3rem] mobile:pt-[3.2rem] mobile:pb-[4.8rem];
 }
 
 .place-order__form__inputs {
@@ -481,7 +481,7 @@ a.active {
 }
 
 .contact__socials {
-  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-400 grid grid-cols-5 justify-between gap-x-[3.2rem] gap-y-[2.4rem] text-tilgray-dark text-[1.4rem] rounded-[9px] mb-[4.8rem] leading-[1.4] tablet:grid-cols-3 tabletSmall:grid-cols-2;
+  @apply px-[6.4rem] pt-[4.8rem] pb-[6.4rem] bg-tilgray-400 grid grid-cols-5 justify-between gap-x-[3.2rem] gap-y-[2.4rem] text-tilgray-dark text-[1.4rem] rounded-[9px] mb-[4.8rem] leading-[1.4] tablet:grid-cols-3 tabletSmall:grid-cols-2 mobile:px-[3rem] mobile:pt-[3.2rem] mobile:pb-[4.8rem];
 }
 
 .contact__social__header {
@@ -540,5 +540,39 @@ a.active {
 
 .check-icon {
   @apply h-[2.4rem] w-[2.4rem];
+}
+
+/* footer */
+
+.main-footer {
+  @apply flex items-start justify-between gap-[3.5rem] mobile:flex-col;
+}
+
+.main-footer__company {
+  @apply max-w-[30rem] text-tilgray-200 leading-[1.4];
+}
+
+.main-footer__company .logo {
+  @apply mb-[1.2rem];
+}
+
+.main-footer__socias {
+  @apply mt-[1.2rem] flex gap-[2rem];
+}
+
+.main-footer__icons img {
+  @apply w-[2.4rem] h-[2.4rem];
+}
+
+.quicklinkheader {
+  @apply font-semibold text-[2rem] mb-[2rem];
+}
+
+.main__footer__quick-links .links {
+  @apply flex flex-col gap-[1.4rem];
+}
+
+.main-footer__link a {
+  @apply font-medium text-tilgray-700 hover:text-tilblue-light;
 }
 @tailwind utilities;

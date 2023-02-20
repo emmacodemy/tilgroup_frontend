@@ -755,8 +755,7 @@ ol {
 }
 
 a {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.6rem;
   font-weight: 400;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
@@ -767,7 +766,8 @@ a {
 
 a:hover,
 a.active {
-  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(0 175 239 / var(--tw-text-opacity));
 }
 
 /* containers */
@@ -957,12 +957,12 @@ a.active {
 /* main navigation links */
 
 .main-nav {
-  pointer-events: none;
   z-index: 50;
 }
 
 @media (max-width: 944px) {
   .main-nav {
+    pointer-events: none;
     visibility: hidden;
     position: absolute;
     top: 9.6rem;
@@ -1240,6 +1240,15 @@ a.active {
   padding-bottom: 6.4rem;
 }
 
+@media (max-width: 544px) {
+  .place-order__inner-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
+  }
+}
+
 .place-order__form__inputs {
   margin-bottom: 2.4rem;
   display: grid;
@@ -1447,6 +1456,15 @@ a.active {
   }
 }
 
+@media (max-width: 544px) {
+  .contact__socials {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 3.2rem;
+    padding-bottom: 4.8rem;
+  }
+}
+
 .contact__social__header {
   margin-bottom: 1rem;
   display: flex;
@@ -1570,6 +1588,66 @@ a.active {
 .check-icon {
   height: 2.4rem;
   width: 2.4rem;
+}
+
+/* footer */
+
+.main-footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3.5rem;
+}
+
+@media (max-width: 544px) {
+  .main-footer {
+    flex-direction: column;
+  }
+}
+
+.main-footer__company {
+  max-width: 30rem;
+  line-height: 1.4;
+  --tw-text-opacity: 1;
+  color: rgb(40 39 39 / var(--tw-text-opacity));
+}
+
+.main-footer__company .logo {
+  margin-bottom: 1.2rem;
+}
+
+.main-footer__socias {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.main-footer__icons img {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.quicklinkheader {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.main__footer__quick-links .links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.main-footer__link a {
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(173 173 173 / var(--tw-text-opacity));
+}
+
+.main-footer__link a:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 175 239 / var(--tw-text-opacity));
 }
 
 .mb-\[2rem\] {

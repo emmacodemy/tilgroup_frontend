@@ -33,6 +33,7 @@ module.exports = {
           400: "#D9D9D9",
           500: "#161515",
           600: "#D7D7D7",
+          700: "#ADADAD",
           border: "#B7B7B7",
           background: "rgba(0, 0, 0, 0.05)",
           lightGray: "rgba(0, 0, 0, 0.15)",
